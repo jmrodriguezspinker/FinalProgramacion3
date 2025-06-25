@@ -1,0 +1,31 @@
+
+@startuml
+title Flujo de Usuario - Tienda Online
+
+start
+
+:Registrarse / Iniciar sesión;
+if (¿Tiene cuenta?) then (Sí)
+  :Iniciar sesión;
+else (No)
+  :Registrarse;
+endif
+
+:Ver productos;
+repeat
+  :Seleccionar producto;
+  :Agregar al carrito;
+repeat while (¿Seguir comprando?)
+
+:Revisar carrito;
+if (¿Confirmar compra?) then (Sí)
+  :Crear orden (orders);
+  :Crear ítems de orden (order_items);
+  :Cambiar estado a Pendiente;
+else (No)
+  :Seguir navegando;
+endif
+
+:Ver historial de pedidos;
+stop
+@enduml

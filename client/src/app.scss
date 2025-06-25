@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./src/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 25% 151%;
+  font-display: swap;
+}
+
+#root {
+  background-color: #FAFAFA;
+}
+
+:root {
+  --navbar-height: 70px;
+  --navy: #0a192f;
+  --visible-height: calc(100vh - var(--navbar-height) - 30px);
+  --container-width: 1000px;
+  --azure-color: #007bff;
+  --sapphire-color: #0056b3;
+  --gainsboro: gainsboro;
+  --min-screen: 320px;
+  --categories-container-width: 220px;
+  --transition: all 500ms ease-out;
+
+  /* Nuevos colores base */
+  --bronze-color: #B8AFA6;
+  --gold-color: #C8AD7F;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 30px;
+  text-decoration: none;
+  -ms-overflow-style: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #2E2E2E;
+  //outline: 1px solid red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Botones con colores bronce y dorado */
+
+.submit-button,
+.card-actions {
+  .add-to-cart {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--bronze-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--gold-color);
+    }
+  }
+
+  .quantity-button {
+    background-color: #fff;
+    border: 1px solid var(--bronze-color);
+    color: var(--bronze-color);
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--bronze-color);
+      color: #fff;
+      border-color: var(--bronze-color);
+    }
+  }
+}
+
+.submit-button {
+  background-color: var(--bronze-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--gold-color);
+  }
+}
+
+.errorText {
+  color: red;
+  text-align: center;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .quantity-controls {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .quantity-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .quantity {
+    font-size: 1rem;
+  }
+
+  .remove-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}
+
+
+  @media (max-width: 501px) {
+    .add-to-cart {
+      padding: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .quantity-controls {
+      gap: 0.5rem;
+    }
+
+    .quantity-display {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quantity-button {
+      font-size: 0.8rem;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quantity {
+      font-size: 0.8rem;
+    }
+
+    .remove-button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  }
+
+  @media (max-width: 421px) {
+    .add-to-cart {
+      padding: 0 0.2rem;
+      font-size: 0.8rem;
+    }
+
+    .quantity-button {
+      font-size: 0.8rem;
+      width: 25px;
+      height: 25px;
+    }
+
+    .remove-button {
+    width: 25px;
+    height: 25px;
+    font-size: 0.6rem;
+  }
+  }
+}

@@ -1,0 +1,112 @@
+#mobile-header {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height);
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2e2e2e;
+    cursor: pointer;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .cart-button {
+      width: 2.8rem;
+      height: 2.8rem;
+      border: 1px solid #007bff;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+      padding: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: #2e2e2e;
+      }
+
+      .cart-badge {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: #dc3545;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(25%, 25%);
+      }
+    }
+  }
+}
+
+#mobileNavbar {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: var(--navbar-height);
+  left: 0;
+  width: 100%;
+  z-index: 998;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+
+  &.open {
+    max-height: 300px; // o ajustable
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      color: #2e2e2e;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #eee;
+        color: #c8ad7f;
+      }
+
+      &.active-li {
+        background-color: #c8ad7f;
+        color: #fff;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}

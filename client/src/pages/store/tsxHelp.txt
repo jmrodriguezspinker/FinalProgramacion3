@@ -1,0 +1,79 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+interface Product {
+  id: number;
+  title: string;
+  price: string;
+  description: string;
+  brand: string;
+  img: string;
+  category: string;
+  inStock: number;
+  genre: string;
+  rating: string;
+  createdAt: string | null;
+  updatedAt: string | null;
+}
+
+
+const ProductList = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  useEffect(() => {
+    // Simulación de fetch de API
+    axios.get('http://localhost:5000/api/products') // Usa tu endpoint real
+      .then(res => setProducts(res.data.products))
+      .catch(err => console.error(err));
+  }, []);
+
+  const filteredProducts = products.filter(product => {
+    const matchGenre = selectedGenre ? product.genre === selectedGenre : true;
+    const matchCategory = selectedCategory ? product.category === selectedCategory : true;
+    return matchGenre && matchCategory;
+  });
+
+  const uniqueGenres = [...new Set(products.map(p => p.genre))];
+  const uniqueCategories = [...new Set(products.map(p => p.category))];
+
+  return (
+    <div>
+      <h1>Productos</h1>
+
+      <div style={{ marginBottom: '1rem' }}>
+        <label>
+          Género:
+          <select value={selectedGenre} onChange={e => setSelectedGenre(e.target.value)}>
+            <option value="">Todos</option>
+            {uniqueGenres.map((g, i) => <option key={i} value={g}>{g}</option>)}
+          </select>
+        </label>
+
+        <label style={{ marginLeft: '1rem' }}>
+          Categoría:
+          <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+            <option value="">Todas</option>
+            {uniqueCategories.map((c, i) => <option key={i} value={c}>{c}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+        {filteredProducts.map(product => (
+          <div key={product.id} style={{ border: '1px solid #ccc', padding: '1rem', width: '200px' }}>
+            <img src={product.img} alt={product.title} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <strong>${product.price}</strong>
+            <p><small>Género: {product.genre}</small></p>
+            <p><small>Categoría: {product.category}</small></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;

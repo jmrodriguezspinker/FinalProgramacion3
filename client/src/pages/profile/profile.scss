@@ -1,0 +1,128 @@
+.profile-container-wrapper {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: #333;
+    font-size: 36px;
+      font-weight: bold;
+      font-family: 'Cormorant Garamond', serif;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+      flex: 1;
+    }
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .logout-btn,
+  .delete-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .primary-btn {
+    background-color: #4b3f72;
+    color: #fff;
+
+    &:hover {
+      background-color: #3a3160;
+    }
+  }
+
+  .secondary-btn {
+    background-color: #ddd;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  .action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .logout-btn {
+      background-color: #f0ad4e;
+      color: white;
+
+      &:hover {
+        background-color: #e49d3c;
+      }
+    }
+
+    .delete-btn {
+      background-color: #d9534f;
+      color: white;
+
+      &:hover {
+        background-color: #c9302c;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}

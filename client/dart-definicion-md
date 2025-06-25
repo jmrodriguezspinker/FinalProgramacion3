@@ -1,0 +1,54 @@
+**Dart** es un lenguaje de programación desarrollado por **Google**, diseñado especialmente para crear aplicaciones rápidas, modernas y multiplataforma.
+
+---
+
+### 🧠 ¿Qué es Dart?
+
+* Es un **lenguaje orientado a objetos**, con una sintaxis parecida a **Java, JavaScript o C#**.
+* Es el **lenguaje principal de Flutter**, el framework de UI de Google.
+* Se puede usar para:
+
+  * Aplicaciones móviles (Flutter)
+  * Aplicaciones web
+  * Aplicaciones de escritorio
+  * Scripts y backends
+
+---
+
+### 🧩 Características clave
+
+| Característica       | Descripción                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| **Compilado**        | Puede compilarse a código nativo (para móviles) o JavaScript (para web).               |
+| **Tipado opcional**  | Soporta tipado fuerte, pero también puedes usar tipado dinámico.                       |
+| **Productivo**       | Tiene hot reload, null safety, y un sistema de paquetes muy moderno.                   |
+| **Moderno y limpio** | Su sintaxis es sencilla y moderna, ideal para desarrolladores nuevos y experimentados. |
+
+---
+
+### 📱 Dart + Flutter
+
+Dart se popularizó porque es el **único lenguaje compatible con Flutter**, el framework de Google para hacer apps **nativas multiplataforma** (iOS, Android, Web, etc.) con una sola base de código.
+
+---
+
+### 👨‍💻 Ejemplo simple en Dart
+
+```dart
+void main() {
+  var name = 'Mundo';
+  print('Hola, $name!');
+}
+```
+
+---
+
+### ✅ Ventajas
+
+* Excelente rendimiento con Flutter (porque se compila a código nativo).
+* Curva de aprendizaje rápida si vienes de JavaScript, Java o C#.
+* Comunidad y soporte de Google.
+
+---
+
+¿Quieres saber cómo se compara Dart con otros lenguajes como JavaScript o Python?

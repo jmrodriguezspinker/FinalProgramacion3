@@ -1,0 +1,87 @@
+// login.scss
+
+.login-container-wrapper {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    legend {
+      font-size: 36px;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      font-family: 'Cormorant Garamond', serif;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #B8AFA6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #C8AD7F;
+    }
+  }
+
+  .create-account-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container-wrapper {
+    padding: 1rem;
+    align-items: flex-start; // para que el scroll funcione mejor
+  }
+
+  .login-container {
+    padding: 1.5rem;
+  }
+}

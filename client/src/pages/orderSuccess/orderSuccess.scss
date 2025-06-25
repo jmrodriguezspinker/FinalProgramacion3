@@ -1,0 +1,62 @@
+.order-success-container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .order-id,
+  .order-total {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin: 10px 0;
+  }
+
+  .products-heading {
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .order-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: left;
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--gainsboro);
+
+      .item-price {
+        color: var(--gold-color);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: var(--azure-color);
+  text-align: center;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+}

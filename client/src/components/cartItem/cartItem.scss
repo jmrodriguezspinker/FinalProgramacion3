@@ -1,0 +1,112 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2e2e;
+
+  &__image {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  &__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  &__quantity {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  &__price {
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  &__total-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__total {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  &__remove-button {
+    border: 1px solid #dc3545;
+    background-color: transparent;
+    color: #dc3545;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #dc3545;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &__name {
+      max-width: 100%;
+      font-size: 0.95rem;
+    }
+
+    &__total-wrapper {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+
+    &__total {
+      font-size: 0.9rem;
+    }
+
+    &__remove-button {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+}
